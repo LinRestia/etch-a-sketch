@@ -1,9 +1,13 @@
 .container {
 display:grid;
-height: 500px;
-width: 500px;
+height: 600px;
+width: 600px;
+justify-content: center;
+align-items: center;
 }
 .container>div {
     background-color: blue;
 }
-
+.container>div:hover {
+    background-color: red;
+}
