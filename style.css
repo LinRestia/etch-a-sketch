@@ -1,13 +1,28 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display:flex;
+    min-height: 100vh;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    flex-direction: column;
+    gap: 2%;
+}
 .container {
 display:grid;
 height: 600px;
 width: 600px;
-justify-content: center;
-align-items: center;
 }
+
 .container>div {
-    background-color: blue;
+    background-color: blue;  
 }
+
 .container>div:hover {
     background-color: red;
 }
