@@ -12,8 +12,13 @@ const createGrid = (size) => {
     for (let i = 0; i < size * size; i++) {
         container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
         container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        container.style.backgroundColor = '#ffffff';
         const div = document.createElement('div');
+        div.classList.add('change')
         container.append(div);
     };
 };
-createGrid(size);
+
+window.onload = function() {
+    createGrid(size);
+}
