@@ -1,4 +1,10 @@
+let size = 16;
 const container = document.querySelector('.container');
+const pixelChange = document.querySelector('#pixel-change');
+pixelChange.addEventListener('click', () => {
+    size = window.prompt('Please choose a number between 16 and 100!');
+    createGrid(size);
+});
 const createGrid = (size) => {
     if(size > 100 || size < 16) {
         return 'Please try a number between 16 and 100! Thank You!';
@@ -10,4 +16,4 @@ const createGrid = (size) => {
         container.append(div);
     };
 };
-createGrid(17);
+createGrid(size);

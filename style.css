@@ -12,6 +12,8 @@ body {
     background-color: aqua;
     flex-direction: column;
     gap: 2%;
+    font-family: sans-serif;
+    font-size: 24px;
 }
 .container {
 display:grid;
@@ -20,7 +22,7 @@ width: 600px;
 }
 
 .container>div {
-    background-color: blue;  
+    background-color: white;  
 }
 
 .container>div:hover {
