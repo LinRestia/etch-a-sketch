@@ -28,3 +28,14 @@ width: 600px;
 .container>div:hover {
     background-color: red;
 }
+
+.main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    border: black solid 2px;
+    justify-content: center;
+}
+
+.settings {
+    background-color: black;
+}
