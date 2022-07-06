@@ -1,17 +1,31 @@
 let size = 16;
 const defaultMode = 'draw';
 let currentMode = 'draw';
+
 const container = document.querySelector('.container');
 const pixelChange = document.querySelector('#pixel-change');
 const eraserBtn = document.querySelector('#eraser');
+const drawBtn = document.querySelector('#draw');
+
+const setCurrentMode = (newMode) => {
+    currentMode = newMode;
+};
 
 const colorChange = (e) => {
-    e.target.style.backgroundColor = '#000000';
+    if (currentMode === 'draw') {
+        e.target.style.backgroundColor = '#000000';
+    } else {
+        e.target.style.backgroundColor = '#ffffff';
+    }
 };
-const eraseColor = (e) => {
-    e.target.style.backgroundColor = '#ffffff';
-}
-eraserBtn.addEventListener('click', eraseColor);
+eraserBtn.addEventListener('click', () => {
+    setCurrentMode('erase');
+    colorChange;
+});
+drawBtn.addEventListener('click', () => {
+    setCurrentMode('draw');
+    colorChange;
+})
 pixelChange.addEventListener('click', () => {
     size = window.prompt('Please choose a number between 16 and 100!');
     createGrid(size);
@@ -27,7 +41,7 @@ const createGrid = (size) => {
         container.style.backgroundColor = '#ffffff';
         const div = document.createElement('div');
         div.classList.add('change')
-        div.addEventListener('mouseover', colorChange);
+        div.addEventListener('click', colorChange);
         container.append(div);
     };
 };
