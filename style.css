@@ -34,7 +34,9 @@ height: 600px;
 width: 600px;
 margin-right: 214px;
 }
-
+.newColor {
+    background-color: white;
+}
 .settings {
     margin-right: 50px;
 }
