@@ -1,7 +1,8 @@
 let size = 16;
 const defaultMode = 'draw';
-let currentMode = 'draw';
-
+let currentMode = defaultMode;
+const defaultColor = '#ff44ee';
+let currentColor = defaultColor;
 const container = document.querySelector('.container');
 const pixelChange = document.querySelector('#pixel-change');
 const eraserBtn = document.querySelector('#eraser');
@@ -10,11 +11,13 @@ const drawBtn = document.querySelector('#draw');
 const setCurrentMode = (newMode) => {
     currentMode = newMode;
 };
-
+const setCurrentColor = (newColor) => {
+    currentColor = newColor;
+}
 const colorChange = (e) => {
     if (currentMode === 'draw') {
         e.target.style.backgroundColor = '#000000';
-    } else {
+    } else if (currentMode === 'erase') {
         e.target.style.backgroundColor = '#ffffff';
     }
 };
