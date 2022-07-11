@@ -33,14 +33,11 @@ display:grid;
 height: 600px;
 width: 600px;
 margin-right: 214px;
+border:5px solid black;
 }
 .newColor {
     background-color: white;
 }
 .settings {
     margin-right: 50px;
-}
-
-.erase-On {
-    background-color: white;
 }
