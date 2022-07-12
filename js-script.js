@@ -6,16 +6,25 @@ let currentMode = defaultMode;
 const defaultColor = '#ff44ee';
 let currentColor = defaultColor;
 
+const defaultType = 'click';
+let currentType = defaultType;
+
 const container = document.querySelector('.container');
 const pixelChange = document.querySelector('#pixel-change');
 const eraserBtn = document.querySelector('#eraser');
 const drawBtn = document.querySelector('#draw');
 const rainbowBtn = document.querySelector('#rainbow');
+const clickBtn = document.querySelector('#hover-type');
+const hoverBtn = document.querySelector('#click-type');
+
 const setCurrentMode = (newMode) => {
     currentMode = newMode;
 };
 const setCurrentColor = (newColor) => {
     currentColor = newColor;
+}
+const setCurrentType = (newType) => {
+    currentType = newType;
 }
 const colorChange = (e) => {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -42,6 +51,12 @@ drawBtn.addEventListener('click', () => {
 rainbowBtn.addEventListener('click', () => {
     setCurrentMode('rainbow');
     colorChange;
+});
+hoverBtn.addEventListener('click', () => {
+    setCurrentType('mouseover');
+})
+clickBtn.addEventListener('click', () => {
+    setCurrentType('click');
 })
 pixelChange.addEventListener('click', () => {
     size = window.prompt('Please choose a number between 16 and 100!');
@@ -59,6 +74,7 @@ const createGrid = (size) => {
         const div = document.createElement('div');
         div.classList.add('change')
         div.addEventListener('click', colorChange);
+        div.addEventListener('mouseover', colorChange);
         container.append(div);
     };
 };
