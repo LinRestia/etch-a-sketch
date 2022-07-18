@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
+    <title>Etch-a-sketch / Pixel Art</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js-script.js" defer></script>
 </head>
 <body>
-    <div class='header'>
-        Pixel Art Maker / Etch-A-Sketch
-    </div>
-    <div class='main-container'>
-        <div class="container"></div>
-        <div class='settings'>
-            <div class='size-number'>
-                <input id='pixel-change' type='button' name='pixel-size' value="Change your pixel size here!">
+    <div class="main-container">
+        <div class='header'>
+            Pixel Art Maker / Etch-A-Sketch
+        </div>
+        <div class="grid-settings">
+            <div class='container'>
+            </div>
+            <div class='settings'>
+                <input type='color' id='choose-color' name ='choose-color' value='#000000'>
+                <input type='button' id='color' name='color' value='click here when you have picked your color'>
+                <div class='size-number'>
+                    <input id='pixel-change' type='button' name='pixel-size' value="Change your pixel size here!">
+                </div>
+                <div class="eraser-btn-container">
+                    <input type='button' id ='eraser' name='erase' value='Click here for an eraser'>
+                </div>
+                <div class="draw-container">
+                    <input type='button' id='draw' name='draw' value='click here for black'>
+                </div>
+                <div class="rainbow-container">
+                    <input type='button' id ='rainbow' name='rainbow' value='Rainbow Mode'>
+                </div>
+                <div class="clear-container">
+                    <input type='button' id='clear' name='clear' value='Click here to clear the grid'>
+                </div>
             </div>
         </div>
     </div>
 </body>
+<script src="js-script.js" defer></script>
 </html>
