@@ -7,7 +7,7 @@ body {
     display:flex;
     min-height: 100vh;
     height:100vh;
-    background-color: aqua;
+    background-color: rgba(155,130,122,50%);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -39,5 +39,40 @@ border:5px solid black;
     background-color: white;
 }
 .settings {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    border: 5px solid black;
     margin-right: 50px;
+    background-color: rgba(72, 139,100, 70%);
+}
+#choose-color {
+    margin-top: 20px;
+}
+#color {
+    width:285px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+#pixel-change {
+    width:190px;
+    border-radius: 20px;
+}
+#eraser {
+    width: 160px;
+    border-radius: 20px;
+}
+#draw {
+    width:130px;
+    border-radius: 20px;
+}
+#rainbow {
+    width:110px;
+    border-radius: 20px;
+}
+#clear {
+    width:180px;
+    border-radius: 20px;
 }
